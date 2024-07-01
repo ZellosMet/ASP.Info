@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Cocktails";
+}
+
+<script>function CompoundMilkshake() { $("#compound").text(`Compound: Ice cream, milk`); }</script>
+<script>function CompoundStrawberryCocktails() { $("#compound").text(`Compound: Ice cream, milk, Strawberry syrup`); }</script>
+<script>function CompoundChocolateCocktail() { $("#compound").text(`Compound: Ice cream, Chocolate milk`); }</script>
+<script>function CompoundBananaCocktails() { $("#compound").text(`Compound: Ice cream, milk, Banana syrup`); }</script>
+
+<div class="text-center">
+    <h1 class="display-4">Cocktails</h1>
+</div>
+<button class="btn btn-primary" onclick="CompoundMilkshake()">Milkshake</button>
+<button class="btn btn-primary" onclick="CompoundStrawberryCocktails()">Strawberry cocktails</button>
+<button class="btn btn-primary" onclick="CompoundChocolateCocktail()">Chocolate cocktails</button>
+<button class="btn btn-primary" onclick="CompoundBananaCocktails()">Banana cocktails</button>
+<div>
+    <br></br>
+    <p id="compound"></p>
+</div>

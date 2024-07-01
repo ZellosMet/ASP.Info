@@ -1,0 +1,23 @@
+﻿@page
+@model Info.Pages.DevicesModel
+@{
+    ViewData["Title"] = "Devices";
+}
+
+<script>function CoffeeGrinder() { $("#power").text(`Мощность: 200Вт`); $("#volume").text(`Объём: 2л`); }</script>
+<script>function Blender() { $("#power").text(`Мощность: 700Вт`); $("#volume").text(`Объём: 300мл`); }</script>
+<script>function Mixer() { $("#power").text(`Мощность: 500Вт`); $("#volume").text(`Объём: 5л`); }</script>
+
+
+<div class="text-center">
+    <h1 class="display-4">Devices</h1>
+</div>
+<button class="btn btn-primary" onclick="CoffeeGrinder()">CoffeeGrinder</button>
+<button class="btn btn-primary" onclick="Blender()">Blender</button>
+<button class="btn btn-primary" onclick="Mixer()">Mixer</button>
+
+<div>
+    <br></br>
+    <p id="power"></p>
+    <p id="volume"></p>
+</div>

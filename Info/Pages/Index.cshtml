@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";    
+}
+@using Info.classes.GamePersons;
+
+@{
+    Warrior warrior = new Warrior(10, 5, 8, 1);
+    Spearmen spearmen = new Spearmen(8, 7, 6, 1);
+    Archer archer = new Archer(5, 9, 5, 1);
+    Wizard wizard = new Wizard(2, 1, 3, 10);
+}
+
+<script>
+    function InfoWarrior() {
+        $("#className").text(`Class Name: @warrior.NameClass`);
+        $("#strenght").text(`Strength: @warrior.Strength`);
+        $("#agility").text(`Agility: @warrior.Agility`);
+        $("#stamina").text(`Stamina: @warrior.Stamina`);
+        $("#intellect").text(`Intellect: @warrior.Intellect`);
+        $("#healthPoints").text(`Health Points: @warrior.HealthPoints`);
+        $("#mana").text(`Mana: @warrior.Mana`);
+        $("#power").text(`Power: @warrior.Power`);
+}</script>
+<script>
+    function InfoSpearmen() {
+        $("#className").text(`Class Name: @spearmen.NameClass`);
+        $("#strenght").text(`Strength: @spearmen.Strength`);
+        $("#agility").text(`Agility: @spearmen.Agility`);
+        $("#stamina").text(`Stamina: @spearmen.Stamina`);
+        $("#intellect").text(`Intellect: @spearmen.Intellect`);
+        $("#healthPoints").text(`Health Points: @spearmen.HealthPoints`);
+        $("#mana").text(`Mana: @spearmen.Mana`);
+        $("#power").text(`Power: @spearmen.Power`);        
+    }</script>
+<script>
+    function InfoArcher() {
+        $("#className").text(`Class Name: @archer.NameClass`);
+        $("#strenght").text(`Strength: @archer.Strength`);
+        $("#agility").text(`Agility: @archer.Agility`);
+        $("#stamina").text(`Stamina: @archer.Stamina`);
+        $("#intellect").text(`Intellect: @archer.Intellect`);
+        $("#healthPoints").text(`Health Points: @archer.HealthPoints`);
+        $("#mana").text(`Mana: @archer.Mana`);
+        $("#power").text(`Power: @archer.Power`);
+    }</script>
+<script>
+    function InfoWizard() {
+        $("#className").text(`Class Name: @wizard.NameClass`);
+        $("#strenght").text(`Strength: @wizard.Strength`);
+        $("#agility").text(`Agility: @wizard.Agility`);
+        $("#stamina").text(`Stamina: @wizard.Stamina`);
+        $("#intellect").text(`Intellect: @wizard.Intellect`);
+        $("#healthPoints").text(`Health Points: @wizard.HealthPoints`);
+        $("#mana").text(`Mana: @wizard.Mana`);
+        $("#power").text(`Power: @wizard.Power`);
+    }</script>
+<div class="text-center">
+    <h1 class="display-4">Game Persons</h1>
+</div>
+    <button class="btn btn-primary" onclick="InfoWarrior()">Warrior</button>
+    <button class="btn btn-primary" onclick="InfoSpearmen()">Spearmen</button>
+    <button class="btn btn-primary" onclick="InfoArcher()">Archer</button>
+    <button class="btn btn-primary" onclick="InfoWizard()">Wizard</button>
+<div>
+    <br></br>
+    <p id="className"></p>
+    <p id="strenght"></p>
+    <p id="agility"></p>
+    <p id="stamina"></p>
+    <p id="intellect"></p>
+    <p id="healthPoints"></p>
+    <p id="mana"></p>
+    <p id="power"></p>
+</div>
+

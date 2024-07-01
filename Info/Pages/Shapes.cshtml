@@ -1,0 +1,22 @@
+﻿@page
+@model Info.Pages.ShapesModel
+@{
+    ViewData["Title"] = "Shapes";
+}
+
+<script>function RectangleFormulas() { $("#area").text(`Area: a^2+b^2`); $("#perimeter").text(`Perimetr: 2(a+b)`); }</script>
+<script>function TriangleFormulas() { $("#area").text(`Area: a*h/2`); $("#perimeter").text(`Perimetr: a+b+c`); }</script>
+<script>function CircleFormulas() { $("#area").text(`Area: Pi*r^2`); $("#perimeter").text(`Perimetr: 2*Pi*r`); }</script>
+
+<div class="text-center">
+    <h1 class="display-4">Shapes</h1>
+</div>
+<button class="btn btn-primary" onclick="RectangleFormulas()">Rectangle</button>
+<button class="btn btn-primary" onclick="TriangleFormulas()">Triangle</button>
+<button class="btn btn-primary" onclick="CircleFormulas()">Circle</button>
+
+<div>
+    <br></br>
+    <p id="perimeter"></p>
+    <p id="area"></p>
+</div>
